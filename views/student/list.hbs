@@ -1,0 +1,17 @@
+<h1>List Students</h1>
+
+{{#each student}}
+<div class="card w-50">
+  <div class="card-body">
+    <h5 class="card-title">{{this.fullname}}</h5>
+      <div class="d-flex align-content-start flex-wrap">
+        <a href="/student/{{this.id}}" class="btn btn-primary">Detail</a>
+        <form action="/student/{{this.id}}/delete" method="POST">
+        <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+    </div>
+  </div>
+</div>
+<br>
+{{/each}}
+
